@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck Building - Strategic Card Game Online | deckbuilding.space</title>
+    <meta name="description" content="Play Deck Building online for free - a strategic card game where you build powerful decks to defeat opponents. Perfect for strategy game enthusiasts.">
+    <meta name="keywords" content="deck building, card game, strategy game, online game, free game, deck builder">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deckbuilding.space/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Deck Building - Strategic Card Game Online">
+    <meta property="og:description" content="Play Deck Building online for free - a strategic card game where you build powerful decks to defeat opponents.">
+    <meta property="og:url" content="https://deckbuilding.space/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deck Building - Strategic Card Game Online">
+    <meta name="twitter:description" content="Play Deck Building online for free - a strategic card game where you build powerful decks to defeat opponents.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-light-blue: #5AC8FA;
+            --apple-dark-blue: #0051D5;
+            --apple-gray: #8E8E93;
+            --apple-light-gray: #F2F2F7;
+            --apple-dark-gray: #1C1C1E;
+            --apple-green: #34C759;
+            --apple-red: #FF3B30;
+            --apple-orange: #FF9500;
+            --apple-white: #FFFFFF;
+            --apple-black: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--apple-dark-gray);
+            background: linear-gradient(135deg, var(--apple-light-gray) 0%, var(--apple-white) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--apple-blue);
+            text-decoration: none;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-light-blue) 100%);
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin: 20px 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--apple-dark-gray);
+            margin: 30px 0 15px;
+            position: relative;
+        }
+
+        h2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background: var(--apple-blue);
+            border-radius: 2px;
+        }
+
+        .game-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .game-iframe-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+        }
+
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .game-description {
+            background: var(--apple-light-gray);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .game-description p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--apple-dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--apple-dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: var(--apple-gray);
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(135deg, var(--apple-green) 0%, var(--apple-blue) 100%);
+            color: white;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--apple-dark-gray);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .game-section {
+                padding: 20px;
+                margin: 20px 0;
+            }
+
+            .game-iframe-container {
+                padding-bottom: 85%; /* Slightly taller on mobile */
+            }
+
+            h2 {
+                margin: 25px 0 12px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .intro {
+                padding: 30px 0;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+                margin: 30px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .game-section {
+                padding: 15px;
+            }
+
+            .game-description {
+                padding: 20px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--apple-light-gray);
+            border-top: 4px solid var(--apple-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">🃏 DeckBuilding.Space</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <p class="intro-text">Master the art of strategic card gameplay</p>
+                <h1>Deck Building</h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="game-section">
+                <h2>🎮 Play Online Now</h2>
+                <div class="game-iframe-container">
+                    <iframe 
+                        class="game-iframe" 
+                        src="https://html5.gamedistribution.com/e7ed48f6f8be41fd98c35c5ccb8fece7/?gd_sdk_referrer_url=https%3A%2F%2Fzh.y8.com%2Fgames%2Falgerijns_patience&key=y8&value=default"
+                        title="Deck Building Game - Play Online Free"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="game-description">
+                <h2>🎯 About Deck Building</h2>
+                <p>
+                    Deck Building is an engaging strategic card game that challenges players to construct powerful decks while adapting to dynamic gameplay scenarios. This classic patience-style game combines traditional solitaire mechanics with innovative deck-building elements, creating a unique and captivating gaming experience.
+                </p>
+                <p>
+                    Players must carefully manage their resources, make tactical decisions, and build synergistic card combinations to achieve victory. The game features intuitive controls optimized for both desktop and mobile devices, ensuring a seamless gaming experience across all platforms.
+                </p>
+                <p>
+                    Whether you're a seasoned card game veteran or new to the deck-building genre, this game offers multiple difficulty levels and gameplay modes to suit every skill level. The clean, modern interface and smooth animations make every move satisfying and visually appealing.
+                </p>
+            </section>
+
+            <section>
+                <h2>✨ Game Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🎲</span>
+                        <h3 class="feature-title">Strategic Gameplay</h3>
+                        <p class="feature-description">Deep tactical mechanics that reward careful planning and strategic thinking</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📱</span>
+                        <h3 class="feature-title">Cross-Platform</h3>
+                        <p class="feature-description">Play seamlessly on desktop, tablet, or mobile devices with responsive design</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🏆</span>
+                        <h3 class="feature-title">Multiple Modes</h3>
+                        <p class="feature-description">Various difficulty levels and game modes to challenge players of all skill levels</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎨</span>
+                        <h3 class="feature-title">Beautiful Design</h3>
+                        <p class="feature-description">Clean, modern interface with smooth animations and intuitive controls</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🎓 How to Play</h2>
+                <div class="game-description">
+                    <p>
+                        <strong>Getting Started:</strong> Begin by familiarizing yourself with the card layout and available moves. The objective is to build and organize your deck according to the specific rules of each game mode.
+                    </p>
+                    <p>
+                        <strong>Strategic Planning:</strong> Success in Deck Building requires forward thinking. Consider each move carefully, as your decisions will impact future opportunities and available strategies.
+                    </p>
+                    <p>
+                        <strong>Winning Conditions:</strong> Complete the objectives for each level by successfully organizing your cards according to the game's rules. Master the fundamentals before progressing to more challenging modes.
+                    </p>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container">
+                    <h2 style="color: white; margin-bottom: 15px;">Ready to Master Deck Building?</h2>
+                    <p style="font-size: 18px; margin-bottom: 0;">Start playing now and discover the perfect blend of strategy and skill!</p>
+                    <a href="#game" class="cta-button">Start Playing Now</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 DeckBuilding.Space - Free Online Card Games | All Rights Reserved</p>
+                <p>Play responsibly and enjoy strategic gaming at its finest</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading state for iframe
+        const iframe = document.querySelector('.game-iframe');
+        const container = document.querySelector('.game-iframe-container');
+        
+        if (iframe && container) {
+            // Create loading spinner
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'loading';
+            loadingDiv.innerHTML = '<div class="spinner"></div>';
+            
+            // Insert loading spinner
+            container.appendChild(loadingDiv);
+            
+            // Remove loading spinner when iframe loads
+            iframe.addEventListener('load', function() {
+                if (loadingDiv.parentNode) {
+                    loadingDiv.remove();
+                }
+            });
+        }
+
+        // Add viewport height fix for mobile browsers
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setVH();
+        window.addEventListener('resize', setVH);
+    </script>
+</body>
+</html>
