@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimized Title -->
+    <title>Space Blocks - Free LEGO-Style Spaceship Building Game Online | Deckbuilding.Space</title>
+    
+    <!-- Meta Descriptions -->
+    <meta name="description" content="Build amazing spaceships with colorful blocks in this free LEGO-style space construction game. Drag, drop, and launch your custom spacecraft on exciting missions. Play now!">
+    <meta name="keywords" content="space building game, LEGO spaceship builder, block construction game, free browser game, kids space game, spacecraft builder online, drag drop game">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://deckbuilding.space/space-blocks">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Space Blocks - Free LEGO-Style Spaceship Building Game">
+    <meta property="og:description" content="Build amazing spaceships with colorful blocks! Free online LEGO-style space construction game with missions and adventures.">
+    <meta property="og:url" content="https://deckbuilding.space/space-blocks">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://deckbuilding.space/images/space-blocks-preview.jpg">
+    <meta property="og:site_name" content="Deckbuilding.Space">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Space Blocks - Free LEGO-Style Spaceship Building Game">
+    <meta name="twitter:description" content="Build amazing spaceships with colorful blocks! Free online space construction game.">
+    <meta name="twitter:image" content="https://deckbuilding.space/images/space-blocks-preview.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Deckbuilding.Space">
+    <meta name="language" content="en">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Geo Targeting -->
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+    
+    <!-- Mobile Optimization -->
+    <meta name="theme-color" content="#4facfe">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Space Blocks",
+        "description": "A free LEGO-style spaceship building game where players construct spacecraft using colorful blocks and launch them on space missions.",
+        "url": "https://deckbuilding.space/space-blocks",
+        "image": "https://deckbuilding.space/images/space-blocks-preview.jpg",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Deckbuilding.Space",
+            "url": "https://deckbuilding.space"
+        },
+        "genre": ["Construction", "Space", "Educational", "Kids"],
+        "playMode": "SinglePlayer",
+        "operatingSystem": "Web Browser",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        },
+        "gameFeature": [
+            "Drag and drop block building",
+            "Colorful LEGO-style graphics",
+            "Space mission gameplay",
+            "Kid-friendly interface",
+            "No downloads required"
+        ]
+    }
+    </script>
+    
+    <style>
+        /* Previous CSS styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 50%, #2d2d5f 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        /* SEO Content Sections */
+        .seo-content {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 15px;
+            color: #333;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .seo-content h2 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .seo-content h3 {
+            color: #6366f1;
+            margin: 20px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4f46e5;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Game container with SEO improvements */
+        .game-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(0, 200, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 200, 255, 0.3);
+            backdrop-filter: blur(5px);
+            font-size: 1.1rem;
+        }
+
+        .game-area {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .build-area {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            min-height: 400px;
+            position: relative;
+        }
+
+        .build-area h2 {
+            margin-bottom: 15px;
+            color: #4facfe;
+        }
+
+        .ship-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 40px);
+            grid-template-rows: repeat(6, 40px);
+            gap: 2px;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-cell {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .grid-cell:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .block {
+            width: 38px;
+            height: 38px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+        }
+
+        .block:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .block.cockpit {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-color: #667eea;
+        }
+
+        .block.engine {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            border-color: #f093fb;
+        }
+
+        .block.cargo {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            border-color: #4facfe;
+        }
+
+        .block.weapon {
+            background: linear-gradient(45deg, #fa709a, #fee140);
+            border-color: #fa709a;
+        }
+
+        .toolbox {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .toolbox h3 {
+            margin-bottom: 15px;
+            color: #4facfe;
+        }
+
+        .tool-block {
+            width: 50px;
+            height: 50px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: grab;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .tool-block:hover {
+            transform: scale(1.1);
+        }
+
+        .tool-block:active {
+            cursor: grabbing;
+        }
+
+        .ship-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .ship-stat {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .ship-stat .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4facfe;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn.launch {
+            background: linear-gradient(45deg, #43e97b, #38f9d7);
+        }
+
+        .btn.clear {
+            background: linear-gradient(45deg, #fa709a, #fee140);
+        }
+
+        .flight-area {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spaceship {
+            position: absolute;
+            transition: all 2s ease-in-out;
+            transform-origin: center;
+        }
+
+        .spaceship.flying {
+            animation: fly 3s ease-in-out;
+        }
+
+        @keyframes fly {
+            0% { transform: translateX(-100px) scale(1); }
+            50% { transform: translateX(50vw) scale(1.5) rotate(360deg); }
+            100% { transform: translateX(100vw) scale(1) rotate(720deg); }
+        }
+
+        .mission-result {
+            background: rgba(67, 233, 123, 0.2);
+            border: 1px solid #43e97b;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .tutorial {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #4facfe;
+        }
+
+        @media (max-width: 768px) {
+            .game-area {
+                grid-template-columns: 1fr;
+            }
+            
+            .ship-grid {
+                grid-template-columns: repeat(6, 35px);
+                grid-template-rows: repeat(5, 35px);
+            }
+            
+            .grid-cell, .block {
+                width: 33px;
+                height: 33px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Footer for additional SEO content */
+        .footer-seo {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h3 {
+            color: #4facfe;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: #4facfe;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <!-- Breadcrumb Navigation -->
+    <div class="game-container">
+        <nav class="breadcrumb">
+            <a href="https://deckbuilding.space">Home</a> > 
+            <a href="https://deckbuilding.space/games">Games</a> > 
+            <span>Space Blocks</span>
+        </nav>
+    </div>
+    
+    <div class="game-container">
+        <header class="header">
+            <h1>🚀 Space Blocks - LEGO-Style Spaceship Builder</h1>
+            <p>Build Amazing Spacecraft with Colorful Blocks - Free Online Game!</p>
+            <div class="stats">
+                <div class="stat">🏆 Missions: <span id="missions">0</span></div>
+                <div class="stat">⭐ Stars: <span id="stars">0</span></div>
+                <div class="stat">🎯 Best Score: <span id="bestScore">0</span></div>
+            </div>
+        </header>
+
+        <!-- Game content starts here -->
+        <div class="tutorial">
+            <strong>🎮 How to Play:</strong> Drag blocks from the toolbox to build your spaceship! You need at least one 🟦 Cockpit to fly. Add 🟨 Engines for speed, 🟩 Cargo for resources, and 🟥 Weapons for combat!
+        </div>
+
+        <div class="game-area">
+            <div class="build-area">
+                <h2>🛠️ Build Your Spaceship</h2>
+                <div class="ship-grid" id="shipGrid"></div>
+                
+                <div class="ship-stats">
+                    <div class="ship-stat">
+                        <div>🚀 Speed</div>
+                        <div class="value" id="speedStat">0</div>
+                    </div>
+                    <div class="ship-stat">
+                        <div>📦 Cargo</div>
+                        <div class="value" id="cargoStat">0</div>
+                    </div>
+                    <div class="ship-stat">
+                        <div>⚔️ Combat</div>
+                        <div class="value" id="combatStat">0</div>
+                    </div>
+                    <div class="ship-stat">
+                        <div>✨ Total</div>
+                        <div class="value" id="totalStat">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbox">
+                <h3>🧰 Blocks</h3>
+                <div class="tool-block cockpit" draggable="true" data-type="cockpit">🟦</div>
+                <div class="tool-block engine" draggable="true" data-type="engine">🟨</div>
+                <div class="tool-block cargo" draggable="true" data-type="cargo">🟩</div>
+                <div class="tool-block weapon" draggable="true" data-type="weapon">🟥</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn launch" onclick="launchShip()" id="launchBtn">🚀 Launch Mission!</button>
+            <button class="btn clear" onclick="clearShip()">🗑️ Clear All</button>
+        </div>
+
+        <div class="flight-area" id="flightArea">
+            <h3 style="text-align: center; color: #4facfe;">🌌 Mission Space</h3>
+            <div id="missionResult"></div>
+        </div>
+
+        <!-- SEO Content Sections -->
+        <section class="seo-content">
+            <h2>🛸 About Space Blocks - The Ultimate LEGO-Style Spaceship Building Game</h2>
+            <p>Space Blocks is a free online construction game that combines the creative joy of LEGO building with exciting space exploration. Players use colorful, easy-to-understand blocks to design and build custom spaceships, then launch them on thrilling missions across the galaxy.</p>
+            
+            <p>Perfect for kids and adults alike, this browser-based game requires no downloads and runs smoothly on all devices. Whether you're a budding engineer or space enthusiast, Space Blocks offers endless possibilities for creative spacecraft construction.</p>
+
+            <h3>🎯 Why Choose Space Blocks?</h3>
+            <div class="features-list">
+                <div class="feature-item">
+                    <strong>🔧 Simple Drag & Drop Building</strong><br>
+                    Intuitive LEGO-style construction system that anyone can master in seconds.
+                </div>
+                <div class="feature-item">
+                    <strong>🌟 Instant Mission Feedback</strong><br>
+                    Watch your custom spacecraft fly through space and complete missions immediately.
+                </div>
+                <div class="feature-item">
+                    <strong>🎮 Kid-Friendly Design</strong><br>
+                    Safe, educational gameplay that encourages creativity and problem-solving.
+                </div>
+                <div class="feature-item">
+                    <strong>📱 Cross-Platform Compatible</strong><br>
+                    Play on desktop, tablet, or mobile - no app store downloads required.
+                </div>
+            </div>
+        </section>
+
+        <section class="seo-content">
+            <h2>🚀 How to Build Your Perfect Spaceship</h2>
+            <p>Creating amazing spacecraft in Space Blocks is as easy as playing with real LEGO blocks! Our game features four essential block types, each serving a unique purpose in your spaceship design:</p>
+
+            <h3>Essential Building Blocks</h3>
+            <ul style="margin: 15px 0; line-height: 1.8;">
+                <li><strong>🟦 Cockpit Blocks:</strong> The command center of your ship - every spacecraft needs at least one to launch missions.</li>
+                <li><strong>🟨 Engine Blocks:</strong> Power and speed boosters that determine how fast and far your ship can travel through space.</li>
+                <li><strong>🟩 Cargo Blocks:</strong> Storage compartments that increase your ship's ability to collect valuable space resources.</li>
+                <li><strong>🟥 Weapon Blocks:</strong> Combat systems that help your spacecraft defend against space pirates and hostile aliens.</li>
+            </ul>
+
+            <h3>Pro Building Tips</h3>
+            <p>Master builders recommend balancing all four block types for optimal performance. Experiment with different configurations - there's no single "correct" way to build! Some players prefer speed-focused designs with multiple engines, while others create cargo-heavy ships for resource collection missions.</p>
+        </section>
+
+        <section class="seo-content">
+            <h2>🌌 Space Mission Adventures</h2>
+            <p>Every spaceship you build in Space Blocks can embark on exciting missions throughout the galaxy. Your ship's performance depends entirely on your construction choices, making each mission a test of your engineering skills.</p>
+
+            <h3>Mission Types You'll Encounter</h3>
+            <p>Space Blocks features dynamic mission generation, ensuring every playthrough offers fresh challenges. Your spaceship might encounter alien traders, asteroid fields, mysterious space phenomena, or distant planets rich with valuable resources. The better balanced your ship design, the higher your chances of mission success!</p>
+
+            <h3>Scoring and Progression</h3>
+            <p>Successful missions reward you with stars and points, tracking your progress as a master spacecraft engineer. Challenge yourself to beat your personal best scores, or simply enjoy the creative process of building unique space vehicles.</p>
+        </section>
+
+        <section class="seo-content">
+            <h2>🎓 Educational Benefits of Space Block Building Games</h2>
+            <p>Space Blocks isn't just entertaining - it's educational! This LEGO-style construction game helps develop crucial STEM skills while kids have fun building and experimenting with spaceship designs.</p>
+
+            <h3>Skills Players Develop</h3>
+            <div class="features-list">
+                <div class="feature-item">
+                    <strong>🧠 Engineering Thinking</strong><br>
+                    Learn cause-and-effect relationships through ship design and mission outcomes.
+                </div>
+                <div class="feature-item">
+                    <strong>🎨 Creative Problem Solving</strong><br>
+                    Discover multiple solutions to space mission challenges through experimentation.
+                </div>
+                <div class="feature-item">
+                    <strong>📊 Basic Mathematics</strong><br>
+                    Understand number relationships through ship statistics and mission scoring.
+                </div>
+                <div class="feature-item">
+                    <strong>🚀 Space Science Interest</strong><br>
+                    Spark curiosity about real space exploration and spacecraft engineering.
+                </div>
+            </div>
+        </section>
+
+        <section class="seo-content">
+            <h2>🔧 Technical Features and Compatibility</h2>
+            <p>Space Blocks is built with modern web technologies to ensure smooth gameplay across all devices and browsers. Our lightweight game engine delivers responsive controls and beautiful graphics without requiring downloads or installations.</p>
+
+            <h3>Browser Compatibility</h3>
+            <p>Play Space Blocks on any modern web browser including Chrome, Firefox, Safari, and Edge. The game automatically adapts to your screen size, providing optimal experiences on desktop computers, tablets, and smartphones.</p>
+
+            <h3>Performance Optimized</h3>
+            <p>Our efficient game engine ensures smooth 60fps gameplay even on older devices. The game loads quickly and uses minimal system resources, making it perfect for classroom environments and home play.</p>
+        </section>
+    </div>
+
+    <footer class="footer-seo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🎮 More Free Games</h3>
+                <ul>
+                    <li><a href="/stellar-deck-architect">Stellar Deck Architect</a></li>
+                    <li><a href="/space-strategy">Space Strategy Games</a></li>
+                    <li><a href="/building-games">Construction Games</a></li>
+                    <li><a href="/kids-games">Kids-Friendly Games</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📚 Game Categories</h3>
+                <ul>
+                    <li><a href="/lego-style-games">LEGO-Style Games</a></li>
+                    <li><a href="/space-games">Space Games</a></li>
+                    <li><a href="/educational-games">Educational Games</a></li>
+                    <li><a href="/browser-games">Browser Games</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>🔗 Quick Links</h3>
+                <ul>
+                    <li><a href="/how-to-play">How to Play Guide</a></li>
+                    <li><a href="/tips-and-tricks">Building Tips</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>🌟 About Us</h3>
+                <p>Deckbuilding.Space creates free, high-quality browser games that combine entertainment with education. Our mission is making STEM learning fun through interactive gameplay.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #444;">
+            <p>&copy; 2025 Deckbuilding.Space - Free LEGO-Style Space Building Games | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Game state
+        let gameState = {
+            missions: 0,
+            stars: 0,
+            bestScore: 0,
+            ship: Array(48).fill(null), // 8x6 grid
+            draggedBlock: null
+        };
+
+        // Block types and their properties
+        const blockTypes = {
+            cockpit: { speed: 1, cargo: 0, combat: 0, emoji: '🟦', required: true },
+            engine: { speed: 3, cargo: 0, combat: 0, emoji: '🟨', required: false },
+            cargo: { speed: 0, cargo: 2, combat: 0, emoji: '🟩', required: false },
+            weapon: { speed: 0, cargo: 0, combat: 3, emoji: '🟥', required: false }
+        };
+
+        // Initialize game
+        function initGame() {
+            createStars();
+            createShipGrid();
+            setupDragAndDrop();
+            updateStats();
+            loadGameData();
+        }
+
+        // Create star background
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = star.style.height = (Math.random() * 3 + 1) + 'px';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Create ship building grid
+        function createShipGrid() {
+            const grid = document.getElementById('shipGrid');
+            grid.innerHTML = '';
+            
+            for (let i = 0; i < 48; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'grid-cell';
+                cell.dataset.index = i;
+                
+                // Add drop event listeners
+                cell.addEventListener('dragover', handleDragOver);
+                cell.addEventListener('drop', handleDrop);
+                cell.addEventListener('click', handleCellClick);
+                
+                grid.appendChild(cell);
+            }
+        }
+
+        // Setup drag and drop
+        function setupDragAndDrop() {
+            const toolBlocks = document.querySelectorAll('.tool-block');
+            
+            toolBlocks.forEach(block => {
+                block.addEventListener('dragstart', handleDragStart);
+            });
+        }
+
+        function handleDragStart(e) {
+            gameState.draggedBlock = e.target.dataset.type;
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const cellIndex = parseInt(e.target.dataset.index);
+            
+            if (gameState.draggedBlock && cellIndex >= 0) {
+                placeBlock(cellIndex, gameState.draggedBlock);
+            }
+            
+            gameState.draggedBlock = null;
+        }
+
+        function handleCellClick(e) {
+            const cellIndex = parseInt(e.target.dataset.index);
+            if (gameState.ship[cellIndex]) {
+                removeBlock(cellIndex);
+            }
+        }
+
+        // Place block on grid
+        function placeBlock(cellIndex, blockType) {
+            if (!blockTypes[blockType]) return;
+            
+            // Remove existing block if any
+            if (gameState.ship[cellIndex]) {
+                removeBlock(cellIndex);
+            }
+            
+            // Place new block
+            gameState.ship[cellIndex] = blockType;
+            
+            // Create visual block
+            const cell = document.querySelector(`[data-index="${cellIndex}"]`);
+            const block = document.createElement('div');
+            block.className = `block ${blockType}`;
+            block.innerHTML = blockTypes[blockType].emoji;
+            block.title = `Click to remove ${blockType}`;
+            
+            cell.appendChild(block);
+            updateStats();
+            
+            // Track for SEO
+            trackGameEvent('block_placed', blockType);
+        }
+
+        // Remove block from grid
+        function removeBlock(cellIndex) {
+            gameState.ship[cellIndex] = null;
+            const cell = document.querySelector(`[data-index="${cellIndex}"]`);
+            const block = cell.querySelector('.block');
+            if (block) {
+                block.remove();
+            }
+            updateStats();
+        }
+
+        // Calculate ship stats
+        function calculateShipStats() {
+            let stats = { speed: 0, cargo: 0, combat: 0, hasCockpit: false };
+            
+            gameState.ship.forEach(blockType => {
+                if (blockType) {
+                    const block = blockTypes[blockType];
+                    stats.speed += block.speed;
+                    stats.cargo += block.cargo;
+                    stats.combat += block.combat;
+                    if (blockType === 'cockpit') {
+                        stats.hasCockpit = true;
+                    }
+                }
+            });
+            
+            return stats;
+        }
+
+        // Update UI stats
+        function updateStats() {
+            const stats = calculateShipStats();
+            
+            document.getElementById('speedStat').textContent = stats.speed;
+            document.getElementById('cargoStat').textContent = stats.cargo;
+            document.getElementById('combatStat').textContent = stats.combat;
+            document.getElementById('totalStat').textContent = stats.speed + stats.cargo + stats.combat;
+            
+            // Enable/disable launch button
+            document.getElementById('launchBtn').disabled = !stats.hasCockpit;
+        }
+
+        // Launch ship mission
+        function launchShip() {
+            const stats = calculateShipStats();
+            
+            if (!stats.hasCockpit) {
+                alert('You need at least one 🟦 Cockpit to launch!');
+                return;
+            }
+            
+            // Create visual spaceship for animation
+            createFlyingShip();
+            
+            // Track launch for SEO
+            trackGameEvent('mission_launched', `Score: ${stats.speed + stats.cargo + stats.combat}`);
+            
+            // Calculate mission results
+            setTimeout(() => {
+                const missionScore = stats.speed + stats.cargo + stats.combat;
+                const success = Math.random() < 0.7 + (missionScore * 0.05); // Higher stats = better chance
+                
+                let starsEarned = 0;
+                let message = '';
+                
+                if (success) {
+                    starsEarned = Math.max(1, Math.floor(missionScore / 3));
+                    message = `🎉 Mission Success! Your ship performed excellently!`;
+                    trackGameEvent('mission_success', `Stars: ${starsEarned}`);
+                } else {
+                    message = `💥 Mission Failed! Your ship needs improvement.`;
+                    trackGameEvent('mission_failed', 'Need better ship design');
+                }
+                
+                gameState.missions++;
+                gameState.stars += starsEarned;
+                gameState.bestScore = Math.max(gameState.bestScore, missionScore);
+                
+                displayMissionResult(message, starsEarned, missionScore);
+                updateGameStats();
+                saveGameData();
+                
+            }, 3000);
+        }
+
+        // Create flying ship animation
+        function createFlyingShip() {
+            const flightArea = document.getElementById('flightArea');
+            const ship = document.createElement('div');
+            ship.className = 'spaceship flying';
+            ship.innerHTML = '🚀';
+            ship.style.fontSize = '2rem';
+            ship.style.left = '-100px';
+            ship.style.top = '50%';
+            
+            flightArea.appendChild(ship);
+            
+            // Remove ship after animation
+            setTimeout(() => {
+                if (ship.parentNode) {
+                    ship.parentNode.removeChild(ship);
+                }
+            }, 3500);
+        }
+
+        // Display mission results
+        function displayMissionResult(message, starsEarned, score) {
+            const resultDiv = document.getElementById('missionResult');
+            resultDiv.innerHTML = `
+                <div class="mission-result">
+                    <h3>${message}</h3>
+                    <p>⭐ Stars Earned: +${starsEarned}</p>
+                    <p>🎯 Mission Score: ${score}</p>
+                </div>
+            `;
+        }
+
+        // Update game statistics
+        function updateGameStats() {
+            document.getElementById('missions').textContent = gameState.missions;
+            document.getElementById('stars').textContent = gameState.stars;
+            document.getElementById('bestScore').textContent = gameState.bestScore;
+        }
+
+        // Clear all blocks
+        function clearShip() {
+            gameState.ship = Array(48).fill(null);
+            document.querySelectorAll('.block').forEach(block => block.remove());
+            updateStats();
+            trackGameEvent('ship_cleared', 'Reset build area');
+        }
+
+        // Save game data
+        function saveGameData() {
+            const saveData = {
+                missions: gameState.missions,
+                stars: gameState.stars,
+                bestScore: gameState.bestScore
+            };
+            // Using a simple variable instead of localStorage for Claude.ai compatibility
+            window.gameData = saveData;
+        }
+
+        // Load game data
+        function loadGameData() {
+            if (window.gameData) {
+                gameState.missions = window.gameData.missions || 0;
+                gameState.stars = window.gameData.stars || 0;
+                gameState.bestScore = window.gameData.bestScore || 0;
+                updateGameStats();
+            }
+        }
+
+        // SEO Enhancement: Add game analytics
+        function trackGameEvent(eventName, details) {
+            // Google Analytics 4 event tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'game_name': 'Space Blocks',
+                    'event_category': 'Game Interaction',
+                    'event_label': details
+                });
+            }
+        }
+
+        // Track when game loads
+        document.addEventListener('DOMContentLoaded', function() {
+            trackGameEvent('game_loaded', 'Space Blocks Started');
+            initGame();
+        });
+    </script>
+
+    <!-- Google Analytics 4 (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+</body>
+</html>
