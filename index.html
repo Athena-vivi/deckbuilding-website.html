@@ -8,20 +8,20 @@
     <meta name="google-adsense-account" content="ca-pub-4942713186815141">
     <title>Deckbuilding: A Sci-Fi Strategy Card Game</title>
     <meta name="description" content="Play Deckbuilding, a free sci-fi card strategy game. Build your fleet, defeat enemy waves, and become the ultimate commander in this browser-based roguelike game.">
-    <link rel="canonical" href="https://yourwebsite.com/deckbuilding-game.html" />
+    <link rel="canonical" href="https://deckbuilding.space/index.html" />
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
       "name": "Deckbuilding: A Sci-Fi Strategy Card Game",
-      "url": "https://yourwebsite.com/deckbuilding-game.html",
+      "url": "https://deckbuilding.space/index.html",
       "description": "A free-to-play browser-based deckbuilding game where you command a star fleet against waves of enemies.",
       "gamePlatform": "PC (Browser)",
       "applicationCategory": "Game",
       "operatingSystem": "Any (Browser)",
-      "author": { "@type": "Person", "name": "Your Name/Studio Name" },
-      "publisher": { "@type": "Person", "name": "Your Name/Studio Name" }
+      "author": { "@type": "Person", "name": "Deckbuilding Game Studio" },
+      "publisher": { "@type": "Person", "name": "Deckbuilding Game Studio" }
     }
     </script>
     <style>
@@ -48,6 +48,28 @@
         .title { font-size: 2.5em; font-weight: 700; background: linear-gradient(45deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 20px rgba(255, 107, 53, 0.5); }
         .wave-indicator { font-size: 1.1em; color: #ff6b35; font-weight: bold; margin-top: 8px; transition: all 0.5s ease; }
         .elite-wave-indicator { color: gold; text-shadow: 0 0 10px gold; }
+        
+        .nav {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav a {
+            color: #74b9ff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+        
+        .nav a:hover {
+            background: rgba(116, 185, 255, 0.2);
+            transform: translateY(-2px);
+        }
 
         h2 { font-size: 1.5em; margin-bottom: 16px; font-weight: 600; color: #eee; }
         .battle-area { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
@@ -109,7 +131,9 @@
         .artifact-choice { background: #16213e; border: 2px solid #74b9ff; border-radius: 12px; padding: 15px; min-width: 150px; cursor: pointer; transition: all 0.3s ease; }
         .artifact-choice:hover { background: #2a5298; transform: scale(1.05); box-shadow: 0 0 15px #74b9ff; }
         
-        @media (max-width: 900px) { .game-stats { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 900px) { 
+            .game-stats { grid-template-columns: repeat(2, 1fr); } 
+        }
         
         /* --- Mobile Single-Screen Layout: Final Revision --- */
         @media (max-width: 768px) {
@@ -122,6 +146,13 @@
                 gap: 8px;
             }
             .header, .content-section { display: none; }
+            
+            .nav a {
+                display: inline-block;
+                margin: 3px 5px;
+                font-size: 0.8em;
+                padding: 4px 8px;
+            }
 
             .game-stats {
                 order: 1; 
@@ -211,6 +242,13 @@
         <header class="header">
             <h1 class="title">🚀 Deckbuilding</h1>
             <div class="wave-indicator" id="waveIndicator">Wave 1: Enemies Approaching!</div>
+            
+            <nav class="nav">
+                <a href="about.html">📖 About</a>
+                <a href="contact.html">📧 Contact</a>
+                <a href="privacy.html">🔒 Privacy</a>
+                <a href="terms.html">📋 Terms</a>
+            </nav>
         </header>
 
         <div class="game-stats">
@@ -265,7 +303,21 @@
     </div>
 
     <div class="container content-section">
-        <h2>About the Game</h2><p>Deckbuilding is a single-player, browser-based strategy game where you command a fleet of starships against endless waves of enemies. Combine tactics, resource management, and a little bit of luck to build the most powerful fleet and see how many waves you can survive.</p><h3>How to Play</h3><ol><li><strong>Use Energy:</strong> Each turn you gain energy, your primary resource.</li><li><strong>Deploy Ships:</strong> Spend energy to play ship cards from your hand. Each ship has unique attack, health, and special abilities.</li><li><strong>Attack:</strong> Once your ships are deployed, hit the "Attack!" button to engage the enemy fleet. Your ships and the enemy will exchange fire.</li><li><strong>Survive and Upgrade:</strong> Defeat the enemy wave to earn rewards, upgrade your ships, and prepare for the next, more challenging encounter.</li></ol><h3>Features</h3><ul><li><strong>Strategic Card Combat:</strong> Make tough decisions about which ships to deploy and when to attack.</li><li><strong>Roguelike Progression:</strong> Every game is different. Upgrade your fleet and add powerful new cards as you advance.</li><li><strong>Endless Waves:</strong> Face increasingly difficult enemies and test the limits of your strategic skill.</li><li><strong>Instant Play:</strong> No downloads required. Play directly in your browser on PC or mobile.</li></ul>
+        <h2>About the Game</h2><p>Deckbuilding is a single-player, browser-based strategy game where you command a fleet of starships against endless waves of enemies. Combine tactics, resource management, and a little bit of luck to build the most powerful fleet and see how many waves you can survive.</p>
+        
+        <h3>How to Play</h3><ol><li><strong>Use Energy:</strong> Each turn you gain energy, your primary resource.</li><li><strong>Deploy Ships:</strong> Spend energy to play ship cards from your hand. Each ship has unique attack, health, and special abilities.</li><li><strong>Attack:</strong> Once your ships are deployed, hit the "Attack!" button to engage the enemy fleet. Your ships and the enemy will exchange fire.</li><li><strong>Survive and Upgrade:</strong> Defeat the enemy wave to earn rewards, upgrade your ships, and prepare for the next, more challenging encounter.</li></ol>
+        
+        <h3>Game Features</h3><ul><li><strong>Strategic Card Combat:</strong> Make tough decisions about which ships to deploy and when to attack.</li><li><strong>Roguelike Progression:</strong> Every game is different. Upgrade your fleet and add powerful new cards as you advance.</li><li><strong>Endless Waves:</strong> Face increasingly difficult enemies and test the limits of your strategic skill.</li><li><strong>Instant Play:</strong> No downloads required. Play directly in your browser on PC or mobile.</li><li><strong>Free to Play:</strong> Completely free with no in-app purchases or premium content.</li><li><strong>Regular Updates:</strong> New ships, features, and improvements added regularly.</li></ul>
+        
+        <h3>Strategy Tips</h3><ul><li><strong>Energy Management:</strong> Don't spend all your energy at once - save some for drawing cards or emergency plays.</li><li><strong>Ship Synergy:</strong> Some ships work better together. Experiment with different combinations!</li><li><strong>Artifact Selection:</strong> Choose artifacts that complement your playstyle and ship collection.</li><li><strong>Elite Waves:</strong> Every third wave is elite - prepare for tougher enemies with better rewards.</li><li><strong>Defensive Play:</strong> Sometimes it's better to build a strong defense than to attack aggressively.</li></ul>
+        
+        <h3>Technical Requirements</h3><ul><li><strong>Browser:</strong> Modern web browser (Chrome, Firefox, Safari, Edge)</li><li><strong>JavaScript:</strong> Must be enabled for gameplay</li><li><strong>Internet:</strong> Required for initial loading and ads</li><li><strong>Storage:</strong> Uses local browser storage for game progress</li><li><strong>Performance:</strong> Optimized for smooth gameplay on most devices</li></ul>
+        
+        <div style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(0, 255, 136, 0.1); border-radius: 10px; border: 1px solid #00ff88;">
+            <h3 style="color: #00ff88; margin-bottom: 15px;">🎮 Ready to Command Your Fleet?</h3>
+            <p style="margin-bottom: 15px;">Join thousands of commanders in epic space battles!</p>
+            <p><a href="about.html" style="color: #74b9ff; text-decoration: none; margin-right: 20px;">📖 Learn More</a> | <a href="contact.html" style="color: #74b9ff; text-decoration: none;">📧 Get Support</a></p>
+        </div>
     </div>
 
     <script>
